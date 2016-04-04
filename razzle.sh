@@ -8,9 +8,10 @@ if (("$#" == 0)); then
 *~
 .DS_Store
 EOF
-	    (cd $file; exec $path_to_self/$(basename $0) $path_to_self)
+	    (cd $file; exec $path_to_self/$(basename $0) $path_to_self)&
 	fi
     done
+    exit
 fi
 
 for file in $(ls); do
@@ -19,8 +20,8 @@ for file in $(ls); do
 *~
 .DS_Store
 EOF
-	(cd $file; exec $1/$(basename $0) $1)
+	(cd $file; exec $1/$(basename $0) $1)&
     fi
 done
-
+exit
 	
