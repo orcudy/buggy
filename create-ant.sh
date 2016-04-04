@@ -9,7 +9,7 @@ src=$(cat $1)
 filename=$2
 
 cat << PROGRAM
-for file in \"$(ls)"; do
+for file in \$(ls); do
     if [ -d \$file ]; then
 	cat <<EOF > \$file/$filename 
 $src 
