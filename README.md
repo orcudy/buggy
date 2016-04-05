@@ -1,34 +1,31 @@
-NAME
+**NAME**  
 	buggy - creates shell scripts
 
-SYNOPSIS
+**SYNOPSIS**    
 	buggy [OPTION]... -s source
 	
-DESCRIPTION
+**DESCRIPTION**
 	Creates recursive shell scripts that have the ability to copy/remove arbitrary files into/out of a directory or recursively execute arbitrary code.
 	
-	-r, --recursive
-	    recursively execute script through all descendant directories
+-r, --recursive  
+	recursively execute script through all descendant directories
 
- 	-x, --execute
-	    execute *source*
+-x, --execute  
+	execute *source*
 
-	-u, --undo
-	    remove files equivalent to *source*
+-u, --undo  
+	remove files equivalent to *source*
 	    
-	-c, --copy
-	    copy *source*
+-c, --copy  
+	copy *source*
 
-	-s, --source
-	    specify path to source file
+-s, --source  
+	specify path to source file
 	    
-	-t, --target
-	    when copyiny, specifies name of new file
+-t, --target  
+	when copyiny, specifies name of new file
 
-AUTHOR
-	Written by Chris Orcutt.
-	
-##Running
+##Compiling
 1. download zip
 2. navigate to root directory
 3. `make`
