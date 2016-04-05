@@ -33,22 +33,22 @@ The *programs* directory in the root directory illustrates potential source file
 1. **gpl-v3.0**: plain text files
 2. **a.out**: executable files
 
-To copy the contents of gpl-v3.0 to all subdirectories, we first need to create the appropriate script. We do this with buggy as follows:
-`$ ./buggy -s programs/gpl-v3.0 -r -c > license.sh`
+To copy the contents of gpl-v3.0 to all subdirectories, we first need to create the appropriate script. We do this with buggy as follows:  
+`$ ./buggy -s programs/gpl-v3.0 -r -c > license.sh`  
 
-This creates a new shell script that will recursively copy the contents of gpl-v3.0 to all subdirectories of where the script is being executed. To execute the shell script, run the following:
-`$ chmod 700 license.sh`
-`$ ./license.sh`
+This creates a new shell script that will recursively copy the contents of gpl-v3.0 to all subdirectories of where the script is being executed. To execute the shell script, run the following:  
+`$ chmod 700 license.sh`  
+`$ ./license.sh`  
 
-The buggy script also has the ability to undo what was previously done. For instance, if we wanted to remove the gpl-v3.0 file from all subdirectories, we would run the following sequence:
-`$ ./buggy.sh -s programs/gpl-v3.0 -r -u > undo-license.sh` 
-`$ chmod 700 undo-license.sh`
-`$ ./undo-license.sh`
+The buggy script also has the ability to undo what was previously done. For instance, if we wanted to remove the gpl-v3.0 file from all subdirectories, we would run the following sequence:  
+`$ ./buggy.sh -s programs/gpl-v3.0 -r -u > undo-license.sh`   
+`$ chmod 700 undo-license.sh`  
+`$ ./undo-license.sh`  
 
-We can also use buggy to write scripts that will execute arbititrary code. For instance, if we wanted to execute a.out in all subdirectories, we would run the following: 
-`$ ./buggy.sh -s programs/a,out -r -x > main.sh` 
-`$ chmod 700 main.sh`
-`$ ./main.sh`
+We can also use buggy to write scripts that will execute arbititrary code. For instance, if we wanted to execute a.out in all subdirectories, we would run the following:   
+`$ ./buggy.sh -s programs/a,out -r -x > main.sh`   
+`$ chmod 700 main.sh`  
+`$ ./main.sh`  
 
 The `-s` option is the only required option in the above code, all other options can be removed and combined as necessary.
 
